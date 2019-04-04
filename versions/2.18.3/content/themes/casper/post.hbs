@@ -50,6 +50,12 @@ into the {body} of the default.hbs template --}}
                     {{content}}
                 </div>
             </section>
+	   
+	    <section>
+		<div id="cyReward" role="cylabs" data-use="reward" sid="{{id}}"></div>
+		<script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+		<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyual9baY"></script>
+	    </section>
 
             {{!-- Email subscribe form at the bottom of the page --}}
             {{#if @labs.subscribers}}
@@ -75,11 +81,42 @@ into the {body} of the default.hbs template --}}
 
             </footer>
 
-            {{!--
+	    <section>
+		<div id="cyEmoji" role="cylabs" data-use="emoji" sid="{{id}}"></div>
+		<script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+		<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyual9baY"></script>
+	    </section>
+
+	    <div id="cyQing" role="cylabs" data-use="qing" sid="{{id}}"></div>
+	    <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyual9baY"></script>
+
             <section class="post-full-comments">
-                If you want to embed comments, this is a good place to do it!
+		{{!--
+		<div id="disqus_thread"></div>
+		<script>
+			var disqus_config = function () {
+				this.page.url = "{{url absolute="true"}}";  
+				this.page.identifier = "ghost-{{comment_id}}"
+			};
+			(function() {
+				var d = document, s = d.createElement('script');
+				s.src = 'https://xlab-1.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		--}}
+		<div id="SOHUCS" sid="{{id}}"></div>
+		<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+		<script type="text/javascript">
+			window.changyan.api.config({
+				appid: 'cyual9baY',
+				conf: 'prod_9c005a248994acc68d19779b82d3f578'
+			});
+		</script>
+
             </section>
-            --}}
 
         </article>
 
